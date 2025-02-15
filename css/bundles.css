@@ -1,4 +1,3 @@
-
     html {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -103,6 +102,7 @@
             stroke-dashoffset: -125px;
         }
     }
+
     .mui-style-ap15uq {
         min-height: 100svh;
         display: -webkit-box;
@@ -163,253 +163,52 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-    
 
     .mui-style-oxrri.MuiPaper-elevation1 {
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     }
-  /* General Styles */
-.mui-style-maf2pp {
-    width: 100%;
-    margin-left: auto;
-    box-sizing: border-box;
-    margin-right: auto;
-    display: block;
-    padding-left: 8px;
-    padding-right: 8px;
-    z-index: 0;
-    position: relative;
-}
 
-/* Adjust padding when modal is open */
-body.modal-open .mui-style-maf2pp {
-    margin-top: 0px; /* Moves content below the modal */
-}
-
-/* Responsive adjustments */
-@media (min-width: 600px) {
     .mui-style-maf2pp {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .mui-style-maf2pp {
-        max-width: 1200px;
-    }
-}
-
-@media (min-width: 0px) {
-    .mui-style-maf2pp {
-        padding-left: 24px;
-        padding-right: 24px;
+        width: 100%;
+        margin-left: auto;
+        box-sizing: border-box;
+        margin-right: auto;
+        display: block;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
-    .mui-style-maf2pp.MuiContainer-disableGutters {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (min-width: 1536px) {
-    .mui-style-maf2pp {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-/* Modal Styles */
-body.modal-open {
-    overflow: hidden; /* Prevent background scrolling */
-    padding-right: 15px; /* Prevent horizontal scrollbar */
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Adjust z-index for proper stacking */
-    padding: 20px;
-    overflow-y: auto; /* Prevent modal overflow */
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transition for showing/hiding modal */
-    opacity: 0;
-    visibility: hidden; /* Hidden by default */
-}
-
-.modal.block {
-    opacity: 1;
-    visibility: visible; /* Show modal when added 'block' class */
-}
-
-.max-w-md {
-    max-width: 400px;
-    width: 100%;
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease-out;
-    z-index: 10000; /* Ensure modal content is above other layers */
-}
-
-/* Header Styling */
-header {
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-p {
-    font-size: 0.875rem;
-    color: #666;
-}
-
-/* OTP Input Styles */
-.flex {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-input[type="text"] {
-    width: 48px;
-    height: 48px;
-    font-size: 1.25rem;
-    text-align: center;
-    font-weight: bold;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    background-color: #f7fafc;
-    transition: all 0.3s ease;
-}
-
-input[type="text"]:focus {
-    border-color: #4c51bf;
-    background-color: #ffffff;
-    outline: none;
-}
-
-input[type="text"]:disabled {
-    background-color: #e2e8f0;
-    cursor: not-allowed;
-}
-
-/* Submit Button Styles */
-button[type="button"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: #4c51bf;
-    color: white;
-    border-radius: 8px;
-    border: none;
-    transition: all 0.2s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #434190;
-}
-
-button[type="submit"]:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
-}
-
-/* Close Modal Button Styles */
-#closeModal {
-    background: none;
-    border: none;
-    font-size: 24px;
-    font-weight: bold;
-    color: #4a4a4a;
-    z-index: 1;
-}
-
-#closeModal:hover {
-    color: #e00;
-    cursor: pointer;
-}
-
-/* Add clean-up effects when modal is closing */
-.modal.close {
-    opacity: 0;
-    visibility: hidden; /* Ensure hidden when closing */
-    pointer-events: none; /* Disable interaction when closing */
-}
-
-.modal.close .max-w-md {
-    animation: fadeOut 0.3s ease-in-out;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-
-    
-    /* Resend text */
-    .text-sm {
-        font-size: 0.875rem;
-        color: #4c51bf;
-    }
-    
-    .text-sm a {
-        font-weight: 600;
-    }
-    
-    /* Modal animation */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
+    @media (min-width:600px) {
+        .mui-style-maf2pp {
+            padding-left: 12px;
+            padding-right: 12px;
         }
     }
-    
-    /* Responsive for smaller screens */
-    @media (max-width: 480px) {
-        .max-w-md {
-            width: 90%;
-            padding: 16px;
-        }
-    
-        input[type="text"] {
-            width: 40px;
-            height: 40px;
-            font-size: 1.125rem;
-        }
-    
-        button[type="submit"] {
-            font-size: 0.875rem;
-        }
-    
-        .text-sm {
-            font-size: 0.75rem;
+
+    @media (min-width:1200px) {
+        .mui-style-maf2pp {
+            max-width: 1200px;
         }
     }
-    
+
+    @media (min-width:0px) {
+        .mui-style-maf2pp {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .mui-style-maf2pp.MuiContainer-disableGutters {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width:1536px) {
+        .mui-style-maf2pp {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 
     .mui-style-hoyzh4 {
         position: relative;
@@ -443,7 +242,7 @@ button[type="submit"]:focus {
     }
 
     .mui-style-1m3balf {
-        gap: 15px;
+        gap: 16px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -451,7 +250,6 @@ button[type="submit"]:focus {
         -webkit-align-items: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        margin-left: -30px; /* Adjust this value as needed */
         align-items: center;
     }
 
@@ -890,69 +688,70 @@ button[type="submit"]:focus {
     }
 
     .mui-style-kdyy22 {
-        margin: 0 auto; /* Centers the element horizontally */
+        margin: 0;
         font-family: '__hurme_1b6468', '__hurme_Fallback_1b6468';
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.15px;
-        text-align: center;
         position: relative;
-        color: #004D9D;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
+        color: #2C2D67;
     }
-    
-    @media (min-width: 0px) {
+
+    @media (min-width:0px) {
         .mui-style-kdyy22 {
             line-height: 28px;
             width: 60%;
-            margin: 0 auto; /* Ensures it's centered */
         }
     }
-    
-    @media (min-width: 600px) {
+
+    @media (min-width:600px) {
         .mui-style-kdyy22 {
             line-height: initial;
         }
     }
-    
-    @media (min-width: 900px) {
+
+    @media (min-width:900px) {
         .mui-style-kdyy22 {
             width: auto;
         }
     }
-    
 
     .mui-style-1ymhlj {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
+        margin-bottom: 24px;
         position: relative;
         background-color: #FFFFFF;
         border-radius: 20px;
         box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.10);
-        max-width: 90%;
-        margin: 40px auto; /* Centers on all screens */
-        padding: 24px 20px;
     }
-    
-    @media (min-width: 600px) {
+
+    @media (min-width:0px) {
+        .mui-style-1ymhlj {
+            margin-top: 40px;
+            padding: 24px 20px;
+        }
+    }
+
+    @media (min-width:600px) {
         .mui-style-1ymhlj {
             margin-top: 48px;
             max-width: 460px;
         }
     }
-    
-    @media (min-width: 900px) {
+
+    @media (min-width:900px) {
         .mui-style-1ymhlj {
             padding: 32px;
             max-width: 560px;
         }
     }
-    
-    
 
     .mui-style-1l4w6pd {
         display: -webkit-box;
@@ -972,7 +771,7 @@ button[type="submit"]:focus {
         font-size: 20px;
         line-height: 30px;
         letter-spacing: 0.15px;
-        color: #004D9D;
+        color: #2C2D67;
     }
 
     @media (min-width:0px) {
@@ -1003,7 +802,7 @@ button[type="submit"]:focus {
         border-radius: 44px;
         position: relative;
         width: 100%;
-        background: linear-gradient(45deg, #FF6701, #004D9D 100%);
+        background: linear-gradient(45deg, #FE402A, #A101FF 100%);
     }
 
     .mui-style-1ogq1q {
@@ -1066,7 +865,7 @@ button[type="submit"]:focus {
         border-radius: 4px;
         -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        color: #004D9D;
+        color: #2C2D67;
         box-shadow: none;
         font-size: 16px;
         border-radius: 25px;
@@ -1227,7 +1026,7 @@ button[type="submit"]:focus {
         -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         color: #fff;
-        background-color: #004D9D;
+        background-color: #2C2D67;
         box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
         width: 100%;
         box-shadow: none;
@@ -1236,7 +1035,7 @@ button[type="submit"]:focus {
         text-transform: none;
         font-weight: 700;
         line-height: 24px;
-        /* background: linear-gradient(45deg, #FE402A, #A101FF 100%); */
+        background: linear-gradient(45deg, #FE402A, #A101FF 100%);
         color: #FFFFFF;
         padding: 6px 48px;
         height: 48px;
@@ -1262,7 +1061,7 @@ button[type="submit"]:focus {
     .mui-style-1w9zeg9:hover {
         -webkit-text-decoration: none;
         text-decoration: none;
-        background-color: #FF6701;
+        background-color: rgb(30, 31, 72);
         box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     }
 
@@ -1366,7 +1165,7 @@ button[type="submit"]:focus {
         line-height: 24px;
         letter-spacing: 0.15px;
         text-align: center;
-        color: #004D9D;
+        color: #2C2D67;
         margin-bottom: 24px;
     }
 
@@ -1389,6 +1188,7 @@ button[type="submit"]:focus {
             letter-spacing: 0.15px;
         }
     }
+
     .mui-style-n372b0 {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1780,9 +1580,7 @@ button[type="submit"]:focus {
         margin-right: auto;
         display: block;
         padding-left: 8px;
-        z-index: 0;
         padding-right: 8px;
-        position: relative; /* Ensure it's positioned relative to avoid overlap */
     }
 
     @media (min-width:600px) {
