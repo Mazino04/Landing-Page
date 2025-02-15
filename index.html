@@ -52,6 +52,7 @@
     <link rel="preload" href="css/index.css" as="style" />
     <link rel="stylesheet" href="css/index.css" data-n-g="" /><noscript data-n-css=""></noscript>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slider.css">
     <script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script>
     <script defer="" src="/_next/static/chunks/5124.c93ececf8abce458.js"></script>
     <script defer="" src="/_next/static/chunks/5827.f03e1fb1fdaf6979.js"></script>
@@ -65,6 +66,24 @@
         defer=""></script>
     <script src="/_next/static/G1qVjxX5fya6_YBoy6vRU/_buildManifest.js" defer=""></script>
     <script src="/_next/static/G1qVjxX5fya6_YBoy6vRU/_ssgManifest.js" defer=""></script>
+    <script>
+    let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Hide all slides
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 } // Reset to the first slide if it exceeds the total
+            slides[slideIndex - 1].style.display = "block";  // Show the current slide
+            setTimeout(showSlides, 7000); // Change image every 3 seconds
+        }
+        
+        window.onload = function() {
+            showSlides();  // Start the slideshow when the page loads
+        };
+        </script>
 </head>
 
 <body>
@@ -87,24 +106,29 @@
             
                 <div class="MuiBox-root mui-style-kzwuyw">
                     <div class="MuiBox-root mui-style-16dhdx3">
-                        <div class="MuiBox-root mui-style-u6i917"><img alt="Couple" fetchpriority="high" width="900"
-                                height="934" decoding="async" data-nimg="1" class="mui-style-1vompmi"
-                                style="color:transparent"
-                                srcSet="https://topup.digicelgroup.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fimg_couple_homepage.a17921f7.webp&amp;w=1080&amp;q=75 1x, https://topup.digicelgroup.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fimg_couple_homepage.a17921f7.webp&amp;w=1920&amp;q=75 2x"
-                                src="https://topup.digicelgroup.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fimg_couple_homepage.a17921f7.webp&amp;w=1920&amp;q=75" />
-                        </div>
-
                         <div class="MuiContainer-root MuiContainer-maxWidthLg mui-style-1il3p6i">
-                            <div class="">
-                                <h1 class="MuiTypography-root MuiTypography-h1 mui-style-l8x9ra"
-                                    style="opacity:0;visibility:hidden">La mejor manera de mantenerse en contacto con
-                                    <span class="MuiTypography-root MuiTypography-h1 mui-style-154c3vy">el Salvador y el
-                                        Caribe</span> es a través de paquetes y recargas.
-                                </h1>
+                            <div class="slider-container">
+                                <div class="slider">
+                                    <div class="slide fade">
+                                        <img src="/images/websitebanner-scaled.jpg" alt="Image 1" />
+                                    </div>
+                                    <div class="slide fade">
+                                        <img src="images/esimwebslider-1-scaled.gif" alt="Image 2" />
+                                    </div>
+                                    <div class="slide fade">
+                                        <img src="/images/website-slidder-3-scaled.jpg" alt="Image 3" />
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="MuiTypography-root MuiTypography-h1 mui-style-l8x9ra">
+                                <div class="MuiBox-root mui-style-u6i9190"></div>
+                            </h1>
+                            <section>
                                 <p class="MuiTypography-root MuiTypography-body1 mui-style-kdyy22">Out of data?
                                     Recharge now and stay connected with your loved one!</p>
-                            </div>
-                            <!-- payement box begins -->
+                            </section>
+                    
+                            <!-- Payment box begins -->
                             <div class="MuiStack-root mui-style-1ymhlj">
                                 <div class="MuiBox-root mui-style-1l4w6pd">
                                     <h3 class="MuiTypography-root MuiTypography-h4 mui-style-s03rb8">Recharge Account</h3>
@@ -112,9 +136,7 @@
                                 <div class="MuiBox-root mui-style-8atqhb">
                                     <div class="MuiStack-root mui-style-15sh2o4">
                                         <div class="mui-style-1ogq1q PhoneInput">
-                                            <button
-                                                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-disableElevation mui-style-1jzzhkd"
-                                                tabindex="0" type="button">
+                                            <button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-disableElevation mui-style-1jzzhkd">
                                                 <div class="MuiStack-root mui-style-1i98nt4">
                                                     <img class="mui-style-0" src="images/flag-1040532_640.png" width="34" height="24">
                                                 </div>
@@ -125,14 +147,14 @@
                                         </div>
                                     </div>
                                     <div class="MuiBox-root mui-style-15p9n5u"></div>
-                                    <button
-                                        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-fullWidth mui-style-1w9zeg9"
+                                    <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-fullWidth mui-style-1w9zeg9"
                                         tabindex="0" type="button">Continue</button>
                                 </div>
                             </div>
-                            <!-- Payement box ends -->
+                            <!-- Payment box ends -->
                         </div>
                     </div>
+                    
                     <div class="MuiContainer-root MuiContainer-maxWidthLg mui-style-maf2pp">
                         <div class="MuiStack-root mui-style-11stqzk">
                             <p class="MuiTypography-root MuiTypography-body1 mui-style-k1o0z9">Payment methods

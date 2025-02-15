@@ -1,0 +1,71 @@
+/* Ensure navbar and logo are positioned correctly */
+header {
+    position: sticky;  /* Keeps the navbar at the top */
+    z-index: 10;  /* Makes sure the navbar stays on top of the slider */
+  
+}
+
+/* Ensure the slider container is positioned below the navbar */
+.slider-container {
+    margin-top: -20px;  /* Adjusts margin to prevent overlap with navbar */
+    z-index: 1;  /* Ensures the slider is behind the navbar */
+    position: relative;
+}
+
+/* Responsive image styling for the slider */
+.slider img {
+    width: 100%;  /* Makes images in the slider responsive */
+    height: auto;
+}
+
+/* Add a little space below the navbar */
+.MuiBox-root.mui-style-1m3balf {
+    margin-top: 10px;
+}
+
+/* Slider container with a fixed height */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* Set a fixed height for the slider */
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+}
+
+/* Fade effect for slides */
+.fade {
+    opacity: 0;
+    animation: fadeIn 15s infinite;
+}
+
+/* Animation for sliding images */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    10%, 30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive settings */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 100%;
+        margin-top: -10px;
+        margin-bottom: -17.2rem;
+    }
+    .slider img {
+        height: 100px;
+    }
+}
