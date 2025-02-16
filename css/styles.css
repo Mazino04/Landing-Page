@@ -181,9 +181,9 @@
     position: relative;
 }
 
-/* Adjust padding when modal is open */
-body.modal-open .mui-style-maf2pp {
-    margin-top: 40px; /* Moves content below the modal */
+.PhoneInputInput {
+    position: relative;
+    z-index: 10; /* Ensures it's above any other elements */
 }
 
 /* Responsive adjustments */
