@@ -82,10 +82,11 @@
                                                 </div>
                                             </button>
                                             <input type="tel" autoComplete="off" aria-label="Phone number"
-                                                class="PhoneInputInput" placeholder="xxxxxxx" pattern="[0-9]{10}"
-                                                maxlength="7" inputmode="numeric"
-                                                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10);"
-                                                required />
+    class="PhoneInputInput" placeholder="xxxxxxx" pattern="[0-9]*"
+    maxlength="10" inputmode="tel"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10);"
+    required />
+
                                         </div>
                                     </div>
                                     <div class="MuiBox-root mui-style-15p9n5u"></div>
