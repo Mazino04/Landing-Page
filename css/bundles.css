@@ -176,6 +176,7 @@
         display: block;
         padding-left: 8px;
         padding-right: 8px;
+        z-index: 0;
     }
 
     @media (min-width:600px) {
@@ -1934,14 +1935,14 @@ img {
   display: block;
   padding-bottom: 20px;
   font-size: var(--normal-font-size);
-  color: var(--first-color-light);
+  color: var(--first-color);
   text-transform: uppercase;
   margin-bottom: var(--mb-0-25);
 }
 
 .card__header-title {
   font-size: var(--biggest-font-size);
-  color: var(--blue-color);
+  color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
@@ -2031,6 +2032,7 @@ img {
 }
 
 .card__button:hover {
+ background-color: #055ab9;
   box-shadow: 0 12px 24px hsla(var(--hue-color), 97%, 54%, 0.2);
 }
 
@@ -2088,6 +2090,7 @@ img {
     margin-bottom: var(--mb-1-25);
   }
   .card__header-subtitle {
-    font-size: var(--small-font-size);
+    font-weight: bold;
+    font-size: var(--normal-font-size);
   }
 }

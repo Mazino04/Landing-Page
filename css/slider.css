@@ -1,14 +1,7 @@
-/* Ensure navbar and logo are positioned correctly */
-header {
-    position: sticky;  /* Keeps the navbar at the top */
-    z-index: 1;  /* Makes sure the navbar stays on top of the slider */
-  
-}
-
 /* Ensure the slider container is positioned below the navbar */
 .slider-container {
     margin-top: -20px;  /* Adjusts margin to prevent overlap with navbar */
-    z-index: 1;  /* Ensures the slider is behind the navbar */
+    z-index: 0;  /* Ensures the slider is behind the navbar */
     position: relative;
 }
 

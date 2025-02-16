@@ -130,12 +130,13 @@
     }
 
     .mui-style-oxrri {
+        
         background-color: #fff;
         color: rgba(0, 0, 0, 0.87);
         -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-        z-index: 0;
+        z-index: 1; /* Reduced to avoid overlapping with modal */
         border-radius: 25px;
         display: -webkit-box;
         display: -webkit-flex;
@@ -151,7 +152,6 @@
         flex-shrink: 0;
         position: -webkit-sticky;
         position: sticky;
-        z-index: 1100;
         top: 0;
         left: auto;
         right: 0;
@@ -161,9 +161,7 @@
         height: 80px;
         background-color: #FFFFFF;
         padding-left: 0px;
-        padding-right: 0px;
     }
-    
 
     .mui-style-oxrri.MuiPaper-elevation1 {
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
@@ -221,8 +219,8 @@
 
 /* Modal Styles */
 body.modal-open {
-    overflow: hidden; /* Prevent background scrolling */
-    padding-right: 15px; /* Prevent horizontal scrollbar */
+    overflow: hidden;
+    padding-right: 15px;
 }
 
 .modal {
@@ -235,17 +233,17 @@ body.modal-open {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Adjust z-index for proper stacking */
+    z-index: 10; /* Ensure modal is above navbar */
     padding: 20px;
-    overflow-y: auto; /* Prevent modal overflow */
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transition for showing/hiding modal */
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     opacity: 0;
-    visibility: hidden; /* Hidden by default */
+    visibility: hidden;
 }
 
 .modal.block {
     opacity: 1;
-    visibility: visible; /* Show modal when added 'block' class */
+    visibility: visible;
 }
 
 .max-w-md {
@@ -256,7 +254,7 @@ body.modal-open {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.3s ease-out;
-    z-index: 10000; /* Ensure modal content is above other layers */
+    z-index: 10001; /* Ensure modal content is above other layers */
 }
 
 /* Header Styling */
@@ -313,18 +311,18 @@ button[type="button"] {
     padding: 12px;
     font-size: 1rem;
     font-weight: 500;
-    background-color: #4c51bf;
+    background-color: #055ab9;
     color: white;
     border-radius: 8px;
     border: none;
     transition: all 0.2s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #434190;
+button[type="button"]:hover {
+    background-color: #ff8500;
 }
 
-button[type="submit"]:focus {
+button[type="button"]:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
 }
@@ -347,8 +345,8 @@ button[type="submit"]:focus {
 /* Add clean-up effects when modal is closing */
 .modal.close {
     opacity: 0;
-    visibility: hidden; /* Ensure hidden when closing */
-    pointer-events: none; /* Disable interaction when closing */
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .modal.close .max-w-md {
@@ -364,51 +362,50 @@ button[type="submit"]:focus {
     }
 }
 
+/* Resend text */
+.text-sm {
+    padding-top: 20px;
+    font-size: 0.875rem;
+    color: #4c51bf;
+}
 
-    
-    /* Resend text */
-    .text-sm {
+.text-sm a {
+    font-weight: 600;
+}
+
+/* Modal animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 480px) {
+    .max-w-md {
+        width: 90%;
+        padding: 16px;
+    }
+
+    input[type="text"] {
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
+
+    button[type="button"] {
         font-size: 0.875rem;
-        color: #4c51bf;
     }
-    
-    .text-sm a {
-        font-weight: 600;
+
+    .text-sm {
+        font-size: 0.75rem;
     }
-    
-    /* Modal animation */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Responsive for smaller screens */
-    @media (max-width: 480px) {
-        .max-w-md {
-            width: 90%;
-            padding: 16px;
-        }
-    
-        input[type="text"] {
-            width: 40px;
-            height: 40px;
-            font-size: 1.125rem;
-        }
-    
-        button[type="submit"] {
-            font-size: 0.875rem;
-        }
-    
-        .text-sm {
-            font-size: 0.75rem;
-        }
-    }
+}
     
 
     .mui-style-hoyzh4 {
@@ -664,6 +661,7 @@ button[type="submit"]:focus {
     }
 
     .mui-style-kzwuyw {
+        z-index: 0;
         background-color: #F4F5FA;
     }
 
