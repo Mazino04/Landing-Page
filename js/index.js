@@ -8,7 +8,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 } // Reset to the first slide if it exceeds the total
     slides[slideIndex - 1].style.display = "block";  // Show the current slide
-    setTimeout(showSlides, 5000); // Change image every 3 seconds
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 
 window.onload = function () {
@@ -20,27 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('phoneVerificationModal');
     const closeModalButton = document.getElementById('closeModal');
 
-    // Check if the modal state is stored in localStorage
-    const isModalOpen = localStorage.getItem('modalOpen') === 'true';
-
-    // Show modal if it was previously open
-    if (isModalOpen) {
-        modal.classList.remove('hidden');
-        modal.classList.add('block');
-
-    }
+    // Remove automatic modal display on page load
 
     // Show modal when 'Continue' button is clicked
     continueButton.addEventListener('click', () => {
         modal.classList.remove('hidden');
         modal.classList.add('block'); // Ensure the modal is visible
-
         localStorage.setItem('modalOpen', 'true'); // Save the modal state
     });
 
     // Close the modal when the close button (X) is clicked
     closeModalButton.addEventListener('click', () => {
-
         localStorage.setItem('modalOpen', 'false'); // Save the modal state
 
         // Clear input fields when closing the modal
@@ -60,13 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submit = form.querySelector('button[type=submit]');
 
     const handleKeyDown = (e) => {
-        if (
-            !/^[0-9]{1}$/.test(e.key)
-            && e.key !== 'Backspace'
-            && e.key !== 'Delete'
-            && e.key !== 'Tab'
-            && !e.metaKey
-        ) {
+        if (!/^[0-9]{1}$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'Tab' && !e.metaKey) {
             e.preventDefault();
         }
 
@@ -113,5 +97,3 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('paste', handlePaste);
     });
 });
-
-
