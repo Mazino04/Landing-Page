@@ -152,6 +152,7 @@
         flex-shrink: 0;
         position: -webkit-sticky;
         position: sticky;
+        padding-top: 25px;
         top: 0;
         left: auto;
         right: 0;
@@ -172,6 +173,7 @@
     margin-left: auto;
     box-sizing: border-box;
     margin-right: auto;
+    margin-top: -30px;
     display: block;
     padding-left: 8px;
     padding-right: 8px;
@@ -872,11 +874,11 @@ button[type="button"]:focus {
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0.15px;
-        background: linear-gradient(45deg, #FE402A, #A101FF 100%);
+        background: #ff8500;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: inherit;
-        color: linear-gradient(45deg, #FE402A, #A101FF 100%);
+        color: #ff8500;
         visibility: hidden;
     }
 
@@ -1006,7 +1008,7 @@ button[type="button"]:focus {
         border-radius: 44px;
         position: relative;
         width: 100%;
-        background: linear-gradient(45deg, #FF6701, #004D9D 100%);
+        background: #ff8500;
     }
 
     .mui-style-1ogq1q {
@@ -1239,7 +1241,6 @@ button[type="button"]:focus {
         text-transform: none;
         font-weight: 700;
         line-height: 24px;
-        /* background: linear-gradient(45deg, #FE402A, #A101FF 100%); */
         color: #FFFFFF;
         padding: 6px 48px;
         height: 48px;
@@ -1510,7 +1511,7 @@ button[type="button"]:focus {
         letter-spacing: 0.15px;
         margin-bottom: 32px;
         color: #2C2D67;
-        background: linear-gradient(10deg, #FE402A 19.23%, #A101FF 51.24%);
+        background: #ff8500;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -1980,7 +1981,7 @@ button[type="button"]:focus {
         left: -3px;
         z-index: -1;
         border-radius: 28px;
-        background: linear-gradient(45deg, #FE402A, #A101FF 100%);
+        background: #ff8500;
     }
 
     .mui-style-14mpajc:hover {

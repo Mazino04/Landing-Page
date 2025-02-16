@@ -1,8 +1,9 @@
 /* Ensure the slider container is positioned below the navbar */
 .slider-container {
-    margin-top: -20px;  /* Adjusts margin to prevent overlap with navbar */
+    margin-top: -28px;
     z-index: 0;  /* Ensures the slider is behind the navbar */
     position: relative;
+    margin-bottom: -35px;
 }
 
 /* Responsive image styling for the slider */
@@ -263,4 +264,167 @@ footer {
     .copyright-text {
         float: right;
     }
+}
+
+
+/* Table Styling */
+.eael-data-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.eael-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.eael-data-table th,
+.eael-data-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.eael-data-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.eael-data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.eael-data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Content Wrapper Styling */
+.td-content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.td-content {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Section Title Styling */
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Link Styling */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Spacer Styling */
+.elementor-spacer {
+    height: 20px;
+}
+
+/* Table Styling */
+.eael-data-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.eael-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.eael-data-table th,
+.eael-data-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.eael-data-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.eael-data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.eael-data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Content Wrapper Styling */
+.td-content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.td-content {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Section Title Styling */
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Link Styling */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Spacer Styling */
+.elementor-spacer {
+    height: 20px;
 }
