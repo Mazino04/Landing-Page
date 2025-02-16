@@ -201,6 +201,21 @@
                                 <button class="card__button">Choose this plan</button>
                             </article>
                         </div>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                document.querySelectorAll(".card__button").forEach(button => {
+                                    button.addEventListener("click", function () {
+                                        let card = this.closest(".card__content");
+                                        let price = card.querySelector(".card__pricing-number").textContent.trim();
+                                        let duration = card.querySelector(".card__header-subtitle").textContent.trim();
+                                        let dataAmount = card.querySelector(".card__header-title").textContent.trim();
+                                        
+                                        // Redirect to checkout.html with selected plan details as query parameters
+                                        window.location.href = `checkout.html`;
+                                    });
+                                });
+                            });
+                        </script>
                     </div>
                     <footer>
                         <div class="copyright-wrap">

@@ -97,3 +97,51 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('paste', handlePaste);
     });
 });
+
+
+      
+
+document.addEventListener("DOMContentLoaded", function () {
+    const prepaidRadio = document.getElementById("method-1");
+    const visaRadio = document.getElementById("method-2");
+    const masterRadio = document.getElementById("method-3");
+
+    const prepaidForm = document.getElementById("prepaid-form");
+    const defaultForm = document.getElementById("default-form");
+
+    function updateForm() {
+        if (prepaidRadio.checked) {
+            prepaidForm.style.display = "block";
+            defaultForm.style.display = "none";
+        } else {
+            prepaidForm.style.display = "none";
+            defaultForm.style.display = "block";
+        }
+    }
+
+    document.querySelectorAll("input[name='payment-method']").forEach(radio => {
+        radio.addEventListener("change", updateForm);
+    });
+
+    updateForm(); // Ensure correct form is shown on load
+});
+
+function showModal(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    const modal = document.getElementById("success-modal");
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    const modal = document.getElementById("success-modal");
+    modal.style.display = "none";
+}
+
+function continueShopping() {
+// Close the modal
+closeModal();
+
+// Redirect to bundles.html
+window.location.href = 'databundles.html';
+}
+
