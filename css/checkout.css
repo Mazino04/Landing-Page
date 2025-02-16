@@ -462,7 +462,7 @@ padding: 10px;
 h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    color: #2e7d32;
+    color: #055ab9;
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -478,7 +478,7 @@ p {
 /* Button styling */
 button {
     padding: 12px 24px;
-    background-color: #2e7d32;
+    background-color: #ff8500;
     color: white;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
@@ -491,7 +491,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-    background-color: #1b5e20;
+    background-color: #055ab9;
 }
 
 /* Close button */
@@ -508,7 +508,7 @@ button:hover {
 
 /* Close button hover effect */
 .close:hover {
-    color: #2e7d32;
+    color: #055ab9;
 }
 
 /* Animation for modal appearance */
