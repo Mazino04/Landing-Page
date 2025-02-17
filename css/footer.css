@@ -1,0 +1,107 @@
+/* General footer styles */
+footer {
+    background-color: #ff8500;
+    color: white;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    min-height: 100px; /* Ensures a minimum height for the footer */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0;
+    z-index: 0;
+    left: 0;
+}
+
+/* Footer wrapper */
+.footer-wrap {
+    display: flex; /* Use flexbox to handle layout */
+    justify-content: space-between; /* Space between logo and copyright */
+    align-items: center; /* Vertically center elements */
+    width: 100%;
+    background-color: inherit; /* Inherits the background color from the footer */
+}
+
+/* Logo section */
+.footer-logo {
+    padding-bottom: 5px;
+}
+
+.footer-logo img {
+    max-width: 150px; /* Default logo size */
+}
+
+/* Copyright text section */
+.copyright-text p {
+    padding-top: 20px;
+    margin: 0;
+    color: white;
+    text-align: right; /* Align the copyright text to the right */
+}
+
+/* Media Queries */
+
+/* Phones (Portrait and Landscape) */
+@media (max-width: 768px) {
+    .footer-wrap {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .footer-logo img {
+        max-width: 120px; /* Reduce logo size */
+    }
+
+    footer {
+        padding: 15px 30px; /* Reduce padding on smaller screens */
+    }
+
+    .copyright-text p {
+        padding-top: 10px; /* Adjust padding for better spacing */
+    }
+}
+
+/* Tablets (Portrait) and iPads */
+@media (max-width: 1024px) {
+    .footer-wrap {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .footer-logo img {
+        max-width: 130px; /* Slightly reduce logo size for tablets */
+    }
+
+    footer {
+        padding: 15px 35px; /* Slightly reduce padding for better fit */
+    }
+
+    .copyright-text p {
+        padding-top: 10px;
+    }
+}
+
+/* Larger Screens (Desktops, Landscape Tablets) */
+@media (min-width: 1025px) {
+    footer {
+        padding: 20px 40px;
+    }
+
+    .footer-wrap {
+        display: flex; /* Use flexbox for large screens */
+        justify-content: space-between; /* Space between logo and copyright */
+        align-items: center; /* Vertically center elements */
+    }
+
+    .footer-logo img {
+        max-width: 150px;
+    }
+
+    .footer-logo {
+        float: left;
+    }
+
+    .copyright-text {
+        float: right;
+        text-align: right; /* Right-align the copyright text */
+    }
+}

@@ -1834,7 +1834,7 @@
   /*========== Font and typography ==========*/
   --body-font: 'Lato', sans-serif;
   --pricing-font: 'Rubik', sans-serif;
-  --biggest-font-size: 1.75rem;
+  --biggest-font-size: 1.85rem;
   --normal-font-size: .938rem;
   --h2-font-size: 1.25rem;
   --small-font-size: .813rem;
@@ -1962,7 +1962,7 @@ img {
 }
 
 .card__pricing-symbol {
- 
+ font-weight: bold;
   font-size: var(--smaller-font-size);
 }
 
@@ -2046,6 +2046,7 @@ img {
   .card__content {
     padding: 2rem 1.25rem;
     border-radius: 1rem;
+    
   }
   .card {
     padding: 2rem;
@@ -2084,7 +2085,7 @@ img {
   .card__container {
     margin-left: 50px;
     margin-right: 50px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   .card__header-circle {
     margin-bottom: var(--mb-1-25);

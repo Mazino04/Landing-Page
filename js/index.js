@@ -19,23 +19,64 @@ document.addEventListener('DOMContentLoaded', () => {
     const continueButton = document.getElementById('continueButton');
     const modal = document.getElementById('phoneVerificationModal');
     const closeModalButton = document.getElementById('closeModal');
+    const paymentMethodModal = document.getElementById('paymentMethodModal');
+    const closePaymentMethodModalButton = document.getElementById('closePaymentMethodModal');
+    const prepaidButton = document.getElementById('prepaidButton');
+    const creditCardButton = document.getElementById('creditCardButton');
 
-    // Remove automatic modal display on page load
+    // Variable to hold the countdown interval ID
+    let resendIntervalId;
 
     // Show modal when 'Continue' button is clicked
     continueButton.addEventListener('click', () => {
         modal.classList.remove('hidden');
         modal.classList.add('block'); // Ensure the modal is visible
         localStorage.setItem('modalOpen', 'true'); // Save the modal state
+
+        // Disable resend link and start 30-second countdown
+        const resendLink = modal.querySelector('.text-sm a');
+        if (resendLink) {
+            // Disable clicking on the link
+            resendLink.style.pointerEvents = 'none';
+            let countdown = 30;
+            resendLink.textContent = `Resend (${countdown})`;
+
+            // Clear any existing interval before starting a new one
+            if (resendIntervalId) {
+                clearInterval(resendIntervalId);
+            }
+            resendIntervalId = setInterval(() => {
+                countdown--;
+                if (countdown > 0) {
+                    resendLink.textContent = `Resend (${countdown})`;
+                } else {
+                    clearInterval(resendIntervalId);
+                    resendIntervalId = null;
+                    resendLink.textContent = 'Resend';
+                    resendLink.style.pointerEvents = 'auto';
+                }
+            }, 1000);
+        }
     });
 
-    // Close the modal when the close button (X) is clicked
+    // Close the phone verification modal
     closeModalButton.addEventListener('click', () => {
         localStorage.setItem('modalOpen', 'false'); // Save the modal state
 
         // Clear input fields when closing the modal
         const inputs = [...modal.querySelectorAll('input[type=text]')];
         inputs.forEach(input => input.value = ''); // Clear all input fields
+
+        // Clear the resend countdown timer and reset the link if needed
+        const resendLink = modal.querySelector('.text-sm a');
+        if (resendIntervalId) {
+            clearInterval(resendIntervalId);
+            resendIntervalId = null;
+        }
+        if (resendLink) {
+            resendLink.textContent = 'Resend';
+            resendLink.style.pointerEvents = 'auto';
+        }
 
         // Wait for the transition to complete, then hide the modal
         setTimeout(() => {
@@ -61,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 inputs[index - 1].focus();
             }
         }
-    }
+    };
 
     const handleInput = (e) => {
         const { target } = e;
@@ -73,11 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 submit.focus();
             }
         }
-    }
+    };
 
     const handleFocus = (e) => {
         e.target.select();
-    }
+    };
 
     const handlePaste = (e) => {
         e.preventDefault();
@@ -88,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const digits = text.split('');
         inputs.forEach((input, index) => input.value = digits[index]);
         submit.focus();
-    }
+    };
 
     inputs.forEach((input) => {
         input.addEventListener('input', handleInput);
@@ -96,35 +137,38 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('focus', handleFocus);
         input.addEventListener('paste', handlePaste);
     });
-});
 
-
-      
-
-document.addEventListener("DOMContentLoaded", function () {
-    const prepaidRadio = document.getElementById("method-1");
-    const visaRadio = document.getElementById("method-2");
-    const masterRadio = document.getElementById("method-3");
-
-    const prepaidForm = document.getElementById("prepaid-form");
-    const defaultForm = document.getElementById("default-form");
-
-    function updateForm() {
-        if (prepaidRadio.checked) {
-            prepaidForm.style.display = "block";
-            defaultForm.style.display = "none";
-        } else {
-            prepaidForm.style.display = "none";
-            defaultForm.style.display = "block";
-        }
-    }
-
-    document.querySelectorAll("input[name='payment-method']").forEach(radio => {
-        radio.addEventListener("change", updateForm);
+    // Simulate successful verification and show payment modal
+    const verifyButton = modal.querySelector('button[type=button]'); // Assuming this is the "Verify number" button
+    verifyButton.addEventListener('click', () => {
+        // Hide phone verification modal
+        modal.classList.remove('block');
+        modal.classList.add('hidden');
+        
+        // Show payment method modal
+        paymentMethodModal.classList.remove('hidden');
+        paymentMethodModal.classList.add('block');
     });
 
-    updateForm(); // Ensure correct form is shown on load
+    // Close the payment method modal
+    closePaymentMethodModalButton.addEventListener('click', () => {
+        paymentMethodModal.classList.remove('block');
+        paymentMethodModal.classList.add('hidden');
+    });
+
+    // Handle payment method selection
+    prepaidButton.addEventListener('click', () => {
+        alert('You selected Prepaid Credit');
+        // You can add additional functionality for prepaid credit here
+    });
+
+    creditCardButton.addEventListener('click', () => {
+        alert('You selected Credit Card');
+        // You can add additional functionality for credit card here
+    });
 });
+
+
 
 function showModal(event) {
     event.preventDefault(); // Prevent the form from submitting
@@ -138,10 +182,60 @@ function closeModal() {
 }
 
 function continueShopping() {
-// Close the modal
-closeModal();
+    // Close the modal
+    closeModal();
 
-// Redirect to bundles.html
-window.location.href = 'databundles.html';
+
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const rows = document.querySelectorAll("#eael-data-table-7b3f15e tbody tr");
+    const showMoreBtn = document.getElementById("showmoreButton");
+    let isExpanded = false;
+
+    // Hide all rows except the first 5
+    rows.forEach((row, index) => {
+        if (index >= 5) {
+            row.style.display = "none";
+        }
+    });
+
+    showMoreBtn.addEventListener("click", function () {
+        if (isExpanded) {
+            rows.forEach((row, index) => {
+                if (index >= 5) {
+                    row.style.display = "none";
+                }
+            });
+            showMoreBtn.textContent = "Show More";
+        } else {
+            rows.forEach(row => {
+                row.style.display = "table-row";
+            });
+            showMoreBtn.textContent = "Show Less";
+        }
+        isExpanded = !isExpanded;
+    });
+
+    // Ensure that the button's styling is not altered by the script
+    showMoreBtn.style.cssText = "display: inline-block;";
+
+    // Move the button outside the table to prevent affecting its styling
+    document.querySelector("#eael-data-table-7b3f15e").parentNode.appendChild(showMoreBtn);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".card__button").forEach(button => {
+        button.addEventListener("click", function () {
+            let card = this.closest(".card__content");
+            let price = card.querySelector(".card__pricing-number").textContent.trim();
+            let duration = card.querySelector(".card__header-subtitle").textContent.trim();
+            let dataAmount = card.querySelector(".card__header-title").textContent.trim();
+
+            // Redirect to checkout.html with selected plan details as query parameters
+            window.location.href = `checkout.html`;
+        });
+    });
+});

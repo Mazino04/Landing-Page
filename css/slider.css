@@ -56,11 +56,11 @@
 @media (max-width: 768px) {
     .slider-container {
         width: 100%;
-        margin-top: -10px;
+        margin-top: 0px;
         margin-bottom: -17.2rem;
     }
     .slider img {
-        height: 100px;
+        height: 135px;
     }
 }
 
@@ -155,276 +155,343 @@ body{
     }
 }
 
-/* General footer styles */
-footer {
-    background-color: #ff8500;
-    color: white;
-    padding: 20px 40px;
-    font-family: Arial, sans-serif;
+/* Table Styling */
+.eael-data-table-wrap {
     width: 100%;
-    min-height: 100px; /* Ensures a minimum height for the footer */
-    position: relative; /* Ensure it stays at the bottom */
-    bottom: 0;
-    z-index: 0;
+    overflow-x: auto;
+}
+
+.eael-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.eael-data-table th,
+.eael-data-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.eael-data-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.eael-data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.eael-data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Content Wrapper Styling */
+.td-content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.td-content {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Section Title Styling */
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Link Styling */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Spacer Styling */
+.elementor-spacer {
+    height: 20px;
+}
+
+/* Table Styling */
+.eael-data-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.eael-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.eael-data-table th,
+.eael-data-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.eael-data-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.eael-data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.eael-data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Content Wrapper Styling */
+.td-content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.td-content {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Section Title Styling */
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Link Styling */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Spacer Styling */
+.elementor-spacer {
+    height: 20px;
+}
+
+body.modal-open {
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Ensure modal is above navbar */
+    padding: 20px;
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
-/* Footer wrapper */
-.footer-wrap {
+.modal.block {
+    opacity: 1;
+    visibility: visible;
+}
+
+.max-w-md {
+    max-width: 400px;
     width: 100%;
-    overflow: hidden; /* Ensures floated elements don't overflow */
-    background-color: inherit; /* Inherits the background color from the footer */
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    z-index: 10001; /* Ensure modal content is above other layers */
 }
 
-/* Logo section */
-.footer-logo {
-    float: left;
-    padding-bottom: 5px;
+/* Header Styling */
+header {
+    margin-bottom: 20px;
 }
 
-.footer-logo img {
-    max-width: 150px;
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
 }
 
-/* Copyright text section */
-.copyright-text {
-    float: right;
+p {
+    font-size: 0.875rem;
+    color: #666;
 }
 
-.copyright-text p {
-    padding-top: 20px;
-    margin: 0;
+/* OTP Input Styles */
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+input[type="text"] {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f7fafc;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4c51bf;
+    background-color: #ffffff;
+    outline: none;
+}
+
+input[type="text"]:disabled {
+    background-color: #e2e8f0;
+    cursor: not-allowed;
+}
+
+/* Submit Button Styles */
+button[type="button"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #055ab9;
     color: white;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s ease;
 }
 
-/* Media Queries */
-
-/* Phones (Portrait and Landscape) */
-@media (max-width: 768px) {
-    .footer-wrap {
-        text-align: center; /* Center align text on smaller screens */
-    }
-
-    .footer-logo,
-    .copyright-text {
-        float: none; /* Remove float to stack elements vertically */
-        width: 100%; /* Make them full-width */
-        text-align: center; /* Center align logo and text */
-    }
-
-    .footer-logo img {
-        max-width: 120px; /* Reduce logo size */
-    }
-
-    footer {
-        padding: 15px 30px; /* Reduce padding on smaller screens */
-    }
+button[type="button"]:hover {
+    background-color: #ff8500;
 }
 
-/* Tablets (Portrait) and iPads */
-@media (max-width: 1024px) {
-    .footer-wrap {
-        text-align: center;
-    }
-
-    .footer-logo,
-    .copyright-text {
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-logo img {
-        max-width: 130px; /* Slightly reduce logo size for tablets */
-    }
-
-    footer {
-        padding: 15px 35px; /* Slightly reduce padding for better fit */
-    }
+button[type="button"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
 }
 
-/* Larger Screens (Desktops, Landscape Tablets) */
-@media (min-width: 1025px) {
-    footer {
-        padding: 20px 40px;
-    }
-
-    .footer-logo img {
-        max-width: 150px;
-    }
-
-    .footer-wrap {
-        text-align: left; /* Default to left-align for larger screens */
-    }
-
-    .footer-logo {
-        float: left;
-    }
-
-    .copyright-text {
-        float: right;
-    }
-}
-
-
-/* Table Styling */
-.eael-data-table-wrap {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.eael-data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.eael-data-table th,
-.eael-data-table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.eael-data-table th {
-    background-color: #f4f4f4;
+/* Close Modal Button Styles */
+#closeModal {
+    background: none;
+    border: none;
+    font-size: 24px;
     font-weight: bold;
+    color: #4a4a4a;
+    z-index: 1;
 }
 
-.eael-data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+#closeModal:hover {
+    color: #e00;
+    cursor: pointer;
 }
 
-.eael-data-table tr:hover {
-    background-color: #f1f1f1;
+/* Add clean-up effects when modal is closing */
+.modal.close {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
-/* Content Wrapper Styling */
-.td-content-wrapper {
-    display: flex;
-    align-items: center;
+.modal.close .max-w-md {
+    animation: fadeOut 0.3s ease-in-out;
 }
 
-.td-content {
-    font-size: 1rem;
-    color: #333;
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-/* Section Title Styling */
-.section-title {
-    margin-bottom: 20px;
+/* Resend text */
+.text-sm {
+    padding-top: 20px;
+    font-size: 0.875rem;
+    color: #4c51bf;
 }
 
-.section-title h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+.text-sm a {
+    font-weight: 600;
 }
 
-/* List Styling */
-ol {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
 
-ol li {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
 
-/* Link Styling */
-a {
-    color: #0073e6;
-    text-decoration: none;
-}
+/* Responsive for smaller screens */
+@media (max-width: 480px) {
+    .max-w-md {
+        width: 90%;
+        padding: 16px;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    input[type="text"] {
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
 
-/* Spacer Styling */
-.elementor-spacer {
-    height: 20px;
-}
+    button[type="button"] {
+        font-size: 0.875rem;
+    }
 
-/* Table Styling */
-.eael-data-table-wrap {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.eael-data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.eael-data-table th,
-.eael-data-table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.eael-data-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
-
-.eael-data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.eael-data-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Content Wrapper Styling */
-.td-content-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.td-content {
-    font-size: 1rem;
-    color: #333;
-}
-
-/* Section Title Styling */
-.section-title {
-    margin-bottom: 20px;
-}
-
-.section-title h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* List Styling */
-ol {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-ol li {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Link Styling */
-a {
-    color: #0073e6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Spacer Styling */
-.elementor-spacer {
-    height: 20px;
+    .text-sm {
+        font-size: 0.75rem;
+    }
 }

@@ -1,0 +1,56 @@
+.accordion-item {
+  border: none;
+  margin: 0; /* Removes spacing between items */
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: none; /* Removes border from last item */
+}
+
+/* Styling the button */
+.accordion-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  padding: 15px 20px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* Left-aligned icon */
+.accordion-button::before {
+  content: "\002B"; /* Unicode for plus icon */
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 15px;
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.accordion-button::after {
+  display: none; /* Completely hides the default Bootstrap arrow */
+}
+
+.accordion-button:not(.collapsed)::before {
+  content: "\2212"; /* Unicode for minus icon */
+  color: #007bff; /* Bootstrap primary color */
+}
+
+/* Answer box styling */
+.accordion-body {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

@@ -22,25 +22,29 @@
     <link rel="stylesheet" href="css/index.css" data-n-g="" /><noscript data-n-css=""></noscript>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+
     <script src="js/index.js"></script>
 </head>
+
 <body>
     <div id="__next">
         <div class="MuiBox-root mui-style-ap15uq">
             <main class="MuiBox-root mui-style-1jny4gj">
-                <header
+                <!-- <header
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionSticky mui-style-oxrri"
                     style="transition: background-color 500ms ease-in">
                     <div class="MuiContainer-root MuiContainer-maxWidthLg mui-style-maf2pp">
                         <div class="MuiToolbar-root MuiToolbar-regular mui-style-hoyzh4">
-                            <div class="MuiBox-root mui-style-1m3balf">
+                             <div class="MuiBox-root mui-style-1m3balf">
                                 <button class="MuiButtonBase-root mui-style-1b47e06">
                                     <img src="images/logo.png" width="164" height="64">
                                 </button>
                             </div>
                         </div>
                     </div>
-                </header>
+                </header> -->
                 <div class="MuiBox-root mui-style-kzwuyw">
                     <div class="slider-container">
                         <div class="slider">
@@ -57,7 +61,7 @@
                     </div>
                     <div class="MuiBox-root mui-style-16dhdx3">
                         <div class="MuiContainer-root MuiContainer-maxWidthLg mui-style-1il3p6i">
-                   
+
                             <h1 class="MuiTypography-root MuiTypography-h1 mui-style-l8x9ra">
                                 <div class="MuiBox-root mui-style-u6i9190"></div>
                             </h1>
@@ -127,12 +131,12 @@
                                                 maxlength="1" />
                                         </div>
                                         <div class="max-w-[260px] mx-auto mt-4">
-                                            <a href="databundles.html">
+                                           
                                                 <button type="button"
                                                     class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150">
                                                     Verify number
                                                 </button>
-                                            </a>
+                                            
                                         </div>
                                     </form>
                                     <div class="text-sm text-slate-500 mt-4">Didn't receive code? <a
@@ -140,6 +144,45 @@
                                             href="#0">Resend</a></div>
                                 </div>
                             </div>
+                            <!-- Payment Method Selection Modal -->
+                            <div id="paymentMethodModal" class="modal">
+                                
+                                <div class="max-w-md mx-auto text-center bg-white px-4 sm:px-8 py-10 rounded-xl shadow relative">
+                                    <button id="closePaymentMethodModal"
+                                    class="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700 focus:outline-none">
+                                    &times;
+                                </button>
+                                    <header class="mb-8">
+                                        <h1 class="text-2xl font-bold mb-1">Choose a Payment Method</h1>
+                                        <p class="text-[15px] text-slate-500">Please select a payment method.</p>
+                                    </header>
+                                    
+                                    <div class="payment-right">
+                                        <form action="" class="payment-form">
+                                            <div class="payment-method">
+                                                <input type="radio" name="payment-method" id="method-1" checked>
+                                                <label for="method-1" class="payment-method-item">
+                                                    <img src="images/Prepaid_Credit.png" alt="">
+                                                </label>
+                                                <input type="radio" name="payment-method" id="method-2">
+                                                <label for="method-2" class="payment-method-item">
+                                                    <img src="images/credit-card.png" alt="">
+                                                </label>
+                                              
+                                            </div>
+                                </div>
+                                <div class="max-w-[260px] mx-auto mt-4">
+                                    <a href="databundles.html">
+                                        <button type="button"
+                                            class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150">
+                                            Continue
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+</div>
+
                             <!-- Payment box ends -->
                         </div>
                     </div>
@@ -150,16 +193,20 @@
                             <div class="MuiBox-root mui-style-n372b0">
                                 <div class="MuiBox-root mui-style-184v61m"><img alt="payment method" loading="lazy"
                                         decoding="async" data-nimg="fill"
-                                        style="position:absolute;height:160%;width:130%;left:0;top:5px;right:0;bottom:0;color:transparent"
+                                        style="position:absolute;height:140%;width:100%;left:0;top:5px;right:0;bottom:0;color:transparent"
                                         src="images/Prepaid_Credit.png" /></div>
                                 <div class="MuiBox-root mui-style-184v61m"><img alt="payment method" loading="lazy"
                                         decoding="async" data-nimg="fill"
-                                        style="position:absolute;height:160%;width:130%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                        style="position:absolute;height:140%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                         src="images/visa.7788b826.svg" /></div>
                                 <div class="MuiBox-root mui-style-184v61m"><img alt="payment method" loading="lazy"
                                         decoding="async" data-nimg="fill"
-                                        style="position:absolute;height:160%;width:130%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                        style="position:absolute;height:140%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                         src="images/mastercard.984f77d1.svg" /></div>
+                                <div class="MuiBox-root mui-style-184v61m"><img alt="payment method" loading="lazy"
+                                        decoding="async" data-nimg="fill"
+                                        style="position:absolute;height:140%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                        src="https://static.placetopay.com/placetopay-logo.svg" /></div>
                             </div>
                         </div>
                     </div>
@@ -425,32 +472,39 @@
                                                                             #31# + Destination Number</div>
                                                                     </div>
                                                                 </td>
+
                                                             </tr>
+
                                                         </tbody>
+                                                        <button
+                                                            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-fullWidth mui-style-1w9zeg23"
+                                                            tabindex="0" id="showmoreButton">Show more</button>
                                                     </table>
+
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
+
                     </div>
-                    <!-- support section ends-->
                     <section class="MuiContainer-root MuiContainer-maxWidthLg mui-style-12sjvzo">
                         <div class="MuiStack-root mui-style-j96o1t"><a
                                 class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation mui-style-14mpajc"
-                                tabindex="0" href="https://smart-bz.com/contact-us/" target="_blank">Contact Us</a>
+                                tabindex="0" href="faq.html">FAQ</a>
                         </div>
 
                     </section>
-                    <footer>
+                    <footer data-bg-color="" data-top-space="px" data-background="">
                         <div class="copyright-wrap">
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-md-4">
                                         <div class="footer-logo">
-                                            <a href="https://smart-bz.com/"><img
+                                            <a href="index.html"><img
                                                     src="https://smart-bz.com/wp-content/uploads/2022/06/logo_White.png"
                                                     alt="logo"></a>
 
@@ -464,8 +518,8 @@
                                 </div>
                             </div>
                         </div>
-
                     </footer>
+
                 </div>
             </main>
         </div>
