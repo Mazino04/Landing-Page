@@ -5,8 +5,10 @@ footer {
     padding: 20px 40px;
     font-family: Arial, sans-serif;
     width: 100%;
-    min-height: 100px; /* Ensures a minimum height for the footer */
-    position: relative; /* Ensure it stays at the bottom */
+    min-height: 100px;
+    /* Ensures a minimum height for the footer */
+    position: relative;
+    /* Ensure it stays at the bottom */
     bottom: 0;
     z-index: 0;
     left: 0;
@@ -14,28 +16,32 @@ footer {
 
 /* Footer wrapper */
 .footer-wrap {
-    display: flex; /* Use flexbox to handle layout */
-    justify-content: space-between; /* Space between logo and copyright */
-    align-items: center; /* Vertically center elements */
     width: 100%;
-    background-color: inherit; /* Inherits the background color from the footer */
+    overflow: hidden;
+    /* Ensures floated elements don't overflow */
+    background-color: inherit;
+    /* Inherits the background color from the footer */
 }
 
 /* Logo section */
 .footer-logo {
+    float: left;
     padding-bottom: 5px;
 }
 
 .footer-logo img {
-    max-width: 150px; /* Default logo size */
+    max-width: 150px;
 }
 
 /* Copyright text section */
+.copyright-text {
+    float: right;
+}
+
 .copyright-text p {
     padding-top: 20px;
     margin: 0;
     color: white;
-    text-align: right; /* Align the copyright text to the right */
 }
 
 /* Media Queries */
@@ -43,40 +49,52 @@ footer {
 /* Phones (Portrait and Landscape) */
 @media (max-width: 768px) {
     .footer-wrap {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center; /* Center align text on smaller screens */
+        text-align: center;
+        /* Center align text on smaller screens */
+    }
+
+    .footer-logo,
+    .copyright-text {
+        float: none;
+        /* Remove float to stack elements vertically */
+        width: 100%;
+        /* Make them full-width */
+        text-align: center;
+        /* Center align logo and text */
     }
 
     .footer-logo img {
-        max-width: 120px; /* Reduce logo size */
+        max-width: 120px;
+        /* Reduce logo size */
     }
 
     footer {
-        padding: 15px 30px; /* Reduce padding on smaller screens */
-    }
-
-    .copyright-text p {
-        padding-top: 10px; /* Adjust padding for better spacing */
+        padding: 15px 30px;
+        /* Reduce padding on smaller screens */
     }
 }
 
 /* Tablets (Portrait) and iPads */
 @media (max-width: 1024px) {
     .footer-wrap {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center; /* Center align text on smaller screens */
+        text-align: center;
+    }
+
+    .footer-logo,
+    .copyright-text {
+        float: none;
+        width: 100%;
+        text-align: center;
     }
 
     .footer-logo img {
-        max-width: 130px; /* Slightly reduce logo size for tablets */
+        max-width: 130px;
+        /* Slightly reduce logo size for tablets */
     }
 
     footer {
-        padding: 15px 35px; /* Slightly reduce padding for better fit */
-    }
-
-    .copyright-text p {
-        padding-top: 10px;
+        padding: 15px 35px;
+        /* Slightly reduce padding for better fit */
     }
 }
 
@@ -86,14 +104,13 @@ footer {
         padding: 20px 40px;
     }
 
-    .footer-wrap {
-        display: flex; /* Use flexbox for large screens */
-        justify-content: space-between; /* Space between logo and copyright */
-        align-items: center; /* Vertically center elements */
-    }
-
     .footer-logo img {
         max-width: 150px;
+    }
+
+    .footer-wrap {
+        text-align: left;
+        /* Default to left-align for larger screens */
     }
 
     .footer-logo {
@@ -102,6 +119,41 @@ footer {
 
     .copyright-text {
         float: right;
-        text-align: right; /* Right-align the copyright text */
+    }
+}
+
+/* Logo container styling */
+/* Logo container styling */
+.placetopay-logo img {
+    margin-top: 40px;
+    height: 60px;
+    /* Adjust the size of the logo */
+    display: block;
+    /* Ensure the image behaves like a block element */
+    margin-bottom: -40px;
+
+}
+
+/* Media query for screens with a max width of 768px (typically tablets and mobile devices) */
+@media (max-width: 768px) {
+    .placetopay-logo img {
+        height: 50px;
+        /* Adjust logo size for smaller screens */
+        margin-left: auto;
+        /* Ensure logo stays centered */
+        margin-right: auto;
+        /* Ensure logo stays centered */
+        padding-bottom: 20px;
+    }
+}
+
+/* Media query for larger screens, like laptops */
+@media (min-width: 769px) {
+    .placetopay-logo img {
+        padding-bottom: 20px;
+        height: 60px;
+        /* Adjust logo size for larger screens */
+        margin-left: 20px;
+        /* Adjust positioning for better spacing on larger screens */
     }
 }

@@ -1395,6 +1395,28 @@
         }
     }
 
+    .mui-style-184v61m21 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+    }
+
+    @media (min-width:0px) {
+        .mui-style-184v61m21 {
+            width: 46px;
+            height: 32px;
+        }
+    }
+
+    @media (min-width:1200px) {
+        .mui-style-184v61m21 {
+            width: 223px;
+            height: 50px;
+        }
+    }
+
     .mui-style-1rrod7r {
         width: 100%;
         margin-left: auto;
