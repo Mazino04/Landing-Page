@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: 1.60rem;
+    --biggest-font-size: 2.40rem;
     --h2-font-size: 1.5rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
@@ -126,18 +126,19 @@
   .card__header-subtitle {
     display: block;
     padding-bottom: 20px;
-    font-size: var(--normal-font-size);
+    font-size: var(--h2-font-size);
     color: var(--first-color);
     text-transform: uppercase;
     margin-bottom: var(--mb-0-25);
-    margin-left: -10px;
+    
   }
   
   .card__header-title {
     font-size: var(--biggest-font-size);
     color: var(--first-color);
+    margin-top: var(--mb-1-5);
     margin-bottom: var(--mb-1);
-    margin-left: -10px;
+    
   }
   
   .card__pricing {
@@ -215,13 +216,14 @@
   }
   
   .card__button {
-    padding: 1.25rem;
+    padding: 13px 22px;
     border: none;
     font-size: var(--normal-font-size);
     border-radius: .5rem;
     background: var(--container-color);
     color: var(--white-color);
     cursor: pointer;
+    margin-top: 30px;
     transition: .4s;
   }
   
@@ -239,7 +241,7 @@
       padding: 0 10px; /* Reduce padding for smaller screens */
     }
     .card__content {
-      padding: 2rem 1.25rem;
+      padding: 1rem 1.25rem;
       border-radius: 1rem;
     }
     .card {
@@ -249,6 +251,8 @@
       margin-left: var(--mb-1);
       margin-right: var(--mb-1);
     }
+    
+    
   }
   
   /* For medium devices */
@@ -264,6 +268,7 @@
     .card__button {
       align-self: flex-end;
     }
+    
   }
   
   /* For large devices */
@@ -279,7 +284,8 @@
     .card__container {
       margin-left: 50px;
       margin-right: 50px;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px; /* Adjust the space between cards */
     }
     .card__header-circle {
       margin-bottom: var(--mb-1-25);
@@ -289,4 +295,5 @@
       font-size: var(--normal-font-size);
     }
   }
+  
   
