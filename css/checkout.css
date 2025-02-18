@@ -270,14 +270,7 @@
     --rose-900: #881337;
     --rose-950: #4c0519;
 }
-.container {
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-/* end: Globals */
-
-
+/* 
 
 /* Start: Payment */
 .payment-section {
