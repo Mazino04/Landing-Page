@@ -264,18 +264,11 @@
         -webkit-align-items: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        margin-left: -8rem; /* Adjust this value as needed */
+       
         align-items: center;
     }
     
-    /* Media query for smaller screens (e.g., mobile devices) */
-    @media (max-width: 768px) {
-        .mui-style-1m3balf {
-            margin-left: -15px; /* Adjust this to prevent overflow on smaller screens */
-            gap: 10px; /* Optionally reduce gap on smaller screens */
-            flex-direction: column; /* Adjust flex direction for better layout on mobile */
-        }
-    }
+
     
 
     .mui-style-1b47e06 {
@@ -722,7 +715,6 @@
         margin: 0 auto; /* Centers the element horizontally */
         font-family: '__hurme_1b6468', '__hurme_Fallback_1b6468';
         font-weight: 400;
-       
         line-height: 24px;
         letter-spacing: 0.15px;
         text-align: center;
@@ -744,14 +736,14 @@
     
     @media (min-width: 600px) {
         .mui-style-kdyy22 {
-            font-size: 16px;
+            font-size: 20px;
             line-height: initial;
         }
     }
     
     @media (min-width: 900px) {
         .mui-style-kdyy22 {
-            font-size: 24px;
+            font-size: 28px;
             width: auto;
         }
     }
