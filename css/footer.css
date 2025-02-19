@@ -1,148 +1,122 @@
-/* General footer styles */
-footer {
-    background-color: #ff8500;
-    color: white;
-    padding: 20px 40px;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    min-height: 100px;
-    /* Ensures a minimum height for the footer */
-    position: relative;
-    /* Ensure it stays at the bottom */
-    bottom: 0;
-    z-index: 0;
-    left: 0;
-}
-
-/* Footer wrapper */
-.footer-wrap {
-    width: 100%;
-    overflow: hidden;
-    /* Ensures floated elements don't overflow */
-    background-color: inherit;
-    /* Inherits the background color from the footer */
-}
-
-/* Logo section */
-.footer-logo {
-    float: left;
-    padding-bottom: 5px;
-}
-
-.footer-logo img {
-    max-width: 150px;
-}
-
-/* Copyright text section */
-.copyright-text {
-    float: right;
-}
-
-.copyright-text p {
-    padding-top: 20px;
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+
+    background-color: #ff8500;
+}
+
+.footerContainer {
+    width: 100%;
+    /* padding: 30px 30px 20px; */
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+/* Added styles for controlling image size */
+.socialIcons img {
+    width: 180px;
+    /* Adjust width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 100%;
+    /* Responsive */
+    object-fit: contain;
+    padding-top: 20px;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 15px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    
+    text-decoration: none;
+    font-size: 1.15em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #ff8500;
+    padding: 10px;
+    text-align: center;
+}
+
+.footerBottom p {
     color: white;
 }
 
-/* Media Queries */
-
-/* Phones (Portrait and Landscape) */
-@media (max-width: 768px) {
-    .footer-wrap {
-        text-align: center;
-        /* Center align text on smaller screens */
-    }
-
-    .footer-logo,
-    .copyright-text {
-        float: none;
-        /* Remove float to stack elements vertically */
-        width: 100%;
-        /* Make them full-width */
-        text-align: center;
-        /* Center align logo and text */
-    }
-
-    .footer-logo img {
-        max-width: 120px;
-        /* Reduce logo size */
-    }
-
-    footer {
-        padding: 15px 30px;
-        /* Reduce padding on smaller screens */
-    }
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
 }
 
-/* Tablets (Portrait) and iPads */
-@media (max-width: 1024px) {
-    .footer-wrap {
-        text-align: center;
+@media (max-width: 100px) {
+    .footerNav ul {
+        flex-direction: column;
     }
 
-    .footer-logo,
-    .copyright-text {
-        float: none;
+    .footerNav ul li {
         width: 100%;
         text-align: center;
+        margin: 10px;
     }
 
-    .footer-logo img {
-        max-width: 130px;
-        /* Slightly reduce logo size for tablets */
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
     }
+    
 
-    footer {
-        padding: 15px 35px;
-        /* Slightly reduce padding for better fit */
-    }
-}
-
-/* Larger Screens (Desktops, Landscape Tablets) */
-@media (min-width: 1025px) {
-    footer {
-        padding: 20px 40px;
-    }
-
-    .footer-logo img {
-        max-width: 150px;
-    }
-
-    .footer-wrap {
-        text-align: left;
-        /* Default to left-align for larger screens */
-    }
-
-    .footer-logo {
-        float: left;
-    }
-
-    .copyright-text {
-        float: right;
+    /* Adjust image size on smaller screens */
+    .socialIcons img {
+        width: 120px;
+        /* Adjust for mobile */
     }
 }
 
-/* Logo container styling */
 /* Logo container styling */
 .placetopay-logo img {
     margin-top: 40px;
     height: 60px;
-    /* Adjust the size of the logo */
     display: block;
-    /* Ensure the image behaves like a block element */
     margin-bottom: -40px;
-
 }
 
-/* Media query for screens with a max width of 768px (typically tablets and mobile devices) */
+/* Media query for screens with a max width of 768px */
 @media (max-width: 768px) {
     .placetopay-logo img {
-        height: 50px;
-        /* Adjust logo size for smaller screens */
+        height: 60px;
         margin-left: auto;
-        /* Ensure logo stays centered */
         margin-right: auto;
-        /* Ensure logo stays centered */
         padding-bottom: 20px;
     }
 }
@@ -151,9 +125,7 @@ footer {
 @media (min-width: 769px) {
     .placetopay-logo img {
         padding-bottom: 20px;
-        height: 60px;
-        /* Adjust logo size for larger screens */
+        height: 80px;
         margin-left: 20px;
-        /* Adjust positioning for better spacing on larger screens */
     }
 }

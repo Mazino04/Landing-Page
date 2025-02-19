@@ -18,12 +18,16 @@
         content="https://smart-bz.com/wp-content/uploads/2021/05/cropped-SmartIcon-MAY2021-270x270.png" />
     <link rel="shortcut icon" type="image/x-icon"
         href="https://smart-bz.com/wp-content/themes/netfix/assets/img/favicon.png">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link rel="stylesheet" href="css/index.css" data-n-g="" /><noscript data-n-css=""></noscript>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/footer.css">
-    
+
 
     <script src="js/index.js"></script>
 </head>
@@ -54,7 +58,7 @@
                             </h1>
                             <section>
                                 <p class="MuiTypography-root MuiTypography-body1 mui-style-kdyy22">Out of data?
-                                 Recharge now and stay connected!</p>
+                                    Recharge now and stay connected!</p>
                             </section>
                             <!-- Payment box begins -->
                             <div class="MuiStack-root mui-style-1ymhlj">
@@ -101,29 +105,29 @@
                                     </header>
                                     <form id="otp-form">
                                         <div class="flex items-center justify-center gap-3">
-                                            <input type="text"
+                                            <input type="text" autoComplete="off"
                                                 class="w-14 h-14 text-center text-2xl font-extrabold text-slate-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded p-4 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
                                                 pattern="\d*" maxlength="1" />
-                                            <input type="text"
+                                            <input type="text" autoComplete="off"
                                                 class="w-14 h-14 text-center text-2xl font-extrabold text-slate-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded p-4 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
                                                 pattern="\d*" maxlength="1" />
-                                            <input type="text"
+                                            <input type="text" autoComplete="off"
                                                 class="w-14 h-14 text-center text-2xl font-extrabold text-slate-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded p-4 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
                                                 maxlength="1" />
-                                            <input type="text"
+                                            <input type="text" autoComplete="off"
                                                 class="w-14 h-14 text-center text-2xl font-extrabold text-slate-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded p-4 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
                                                 maxlength="1" />
-                                            <input type="text"
+                                            <input type="text" autoComplete="off"
                                                 class="w-14 h-14 text-center text-2xl font-extrabold text-slate-900 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded p-4 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
                                                 maxlength="1" />
                                         </div>
                                         <div class="max-w-[260px] mx-auto mt-4">
-                                           
-                                                <button type="button"
-                                                    class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150">
-                                                    Verify number
-                                                </button>
-                                            
+
+                                            <button type="button"
+                                                class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150">
+                                                Verify number
+                                            </button>
+
                                         </div>
                                     </form>
                                     <div class="text-sm text-slate-500 mt-4">Didn't receive code? <a
@@ -133,42 +137,121 @@
                             </div>
                             <!-- Payment Method Selection Modal -->
                             <div id="paymentMethodModal" class="modal">
-                                
-                                <div class="max-w-md mx-auto text-center bg-white px-4 sm:px-8 py-10 rounded-xl shadow relative">
+
+                                <div
+                                    class="max-w-md mx-auto text-center bg-white px-4 sm:px-8 py-10 rounded-xl shadow relative">
                                     <button id="closePaymentMethodModal"
-                                    class="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700 focus:outline-none">
-                                    &times;
-                                </button>
+                                        class="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700 focus:outline-none">
+                                        &times;
+                                    </button>
                                     <header class="mb-8">
-                                        <h1 class="text-2xl font-bold mb-1">Choose a Payment Method</h1>
+                                        <h1 class="text-2xl font-bold mb-1" style="align-content: center;">Choose a
+                                            Payment Method</h1>
                                         <p class="text-[15px] text-slate-500">Please select a payment method.</p>
                                     </header>
-                                    
+<style>
+    #continue-btn {
+        background-color: #004D9D;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #continue-btn span {
+        color: #fff;
+        text-align: center;
+        display: block;
+    }
+    #continue-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    #continue-btn:hover {
+        background-color: #FF6701;
+    }
+</style>
                                     <div class="payment-right">
                                         <form action="" class="payment-form">
                                             <div class="payment-method">
-                                                <input type="radio" name="payment-method" id="method-1" checked>
-                                                <label for="method-1" class="payment-method-item">
+                                                <button type="button" class="payment-method-item" id="prepaid-btn"
+                                                    style="background-color: #f9f9f9;border: 1px solid #FF6701;">
                                                     <img src="images/Prepaid_Credit.png" alt="">
-                                                </label>
-                                                <input type="radio" name="payment-method" id="method-2">
-                                                <label for="method-2" class="payment-method-item">
+                                                    <span style="color: #004D9D;">Prepaid Credit</span>
+                                                    <span class="checkmark">&#10004;</span>
+                                                </button>
+                                                <button type="button" class="payment-method-item" id="card-btn"
+                                                    style="background-color: #f9f9f9;border: 1px solid #FF6701;">
                                                     <img src="images/credit-card.png" alt="">
-                                                </label>
-                                              
+                                                    <span style="color: #004D9D;">Credit Card</span>
+                                                    <span class="checkmark">&#10004;</span>
+                                                </button>
+
+                                                <button type="button" class="payment-method-item" id="continue-btn"
+
+    onclick="window.location.href='bundles.html';">
+    <span>Continue</span>
+</button>
+
+                                        
+                                        
+                                        
                                             </div>
-                                </div>
-                                <div class="max-w-[260px] mx-auto mt-4">
-                                    <a href="bundles.html">
-                                        <button type="button"
-                                            class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150">
-                                            Continue
-                                        </button>
-                                    </a>
+
+                                        </form>
+                                    </div>
+
+                                  
+                 <script>document.addEventListener("DOMContentLoaded", function () {
+                    const prepaidBtn = document.getElementById("prepaid-btn");
+                    const cardBtn = document.getElementById("card-btn");
+                    const continueBtn = document.getElementById("continue-btn");
+                    
+                    let selectedMethod = null;
+                    
+                    function toggleSelection(button) {
+                        if (selectedMethod === button) {
+                            // Unselect if the same button is clicked again
+                            button.classList.remove("selected");
+                            selectedMethod = null;
+                            disableContinueButton();
+                        } else {
+                            // Select new button and deselect the previous one
+                            if (selectedMethod) {
+                                selectedMethod.classList.remove("selected");
+                            }
+                            button.classList.add("selected");
+                            selectedMethod = button;
+                            enableContinueButton();
+                        }
+                    }
+                    
+                    function disableContinueButton() {
+                        continueBtn.disabled = true;
+                        continueBtn.classList.add("opacity-50", "cursor-not-allowed", "pointer-events-none");
+                    }
+                    
+                    function enableContinueButton() {
+                        continueBtn.disabled = false;
+                        continueBtn.classList.remove("opacity-50", "cursor-not-allowed", "pointer-events-none");
+                    }
+                    
+                    prepaidBtn.addEventListener("click", function () {
+                        toggleSelection(prepaidBtn);
+                    });
+                    
+                    cardBtn.addEventListener("click", function () {
+                        toggleSelection(cardBtn);
+                    });
+                    
+                    // Initially disable the continue button
+                    disableContinueButton();
+                });
+                </script>
                                 </div>
                             </div>
-                            
-</div>
 
                             <!-- Payment box ends -->
                         </div>
@@ -180,7 +263,7 @@
                             <div class="MuiBox-root mui-style-n372b0">
                                 <div class="MuiBox-root mui-style-184v61m"><img alt="payment method" loading="lazy"
                                         decoding="async" data-nimg="fill"
-                                        style="position:absolute;height:140%;width:100%;left:0;top:5px;right:0;bottom:0;color:transparent"
+                                        style="position:absolute;height:100%;width:100%;left:0;top:9px;right:0;bottom:0;color:transparent"
                                         src="images/Prepaid_Credit.png" /></div>
                                 <div class="MuiBox-root mui-style-184v61m"><img alt="payment method" loading="lazy"
                                         decoding="async" data-nimg="fill"
@@ -190,7 +273,7 @@
                                         decoding="async" data-nimg="fill"
                                         style="position:absolute;height:140%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                         src="images/mastercard.984f77d1.svg" /></div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -475,41 +558,36 @@
                         </section>
 
                     </div>
-                 
+
                     <section class="MuiContainer-root MuiContainer-maxWidthLg mui-style-12sjvzo">
-                        <div class="MuiStack-root mui-style-j96o1t"><a
-                                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation mui-style-14mpajc"
-                                tabindex="0" href="faq.html">FAQ</a>
-                        </div>
                         <div class="placetopay-logo">
                             <img src="https://static.placetopay.com/placetopay-logo.svg" />
                         </div>
                     </section>
                     <footer>
-                        <div class="copyright-wrap">
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <!-- Logo Section -->
-                                    <div class="col-md-4 d-flex align-items-center">
-                                        <div class="footer-logo">
-                                            <a href="index.html">
-                                                <img src="https://smart-bz.com/wp-content/uploads/2022/06/logo_White.png" alt="logo">
-                                            </a>
-                                        </div>
-                                     
-                                    </div>
-                                    
-                                    <!-- Copyright Text Section -->
-                                    <div class="col-md-8">
-                                        <div class="copyright-text text-center text-md-end">
-                                            <p>Copyright © 2022 Smart Belize. All Rights Reserved</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="footerContainer">
+                            <div class="socialIcons">
+                                <a href="index.html">
+                                    <img src="https://smart-bz.com/wp-content/uploads/2022/06/logo_White.png"
+                                        alt="logo">
+                                </a>
+
                             </div>
+                            <div class="footerNav">
+                                <ul>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="footerBottom">
+                            <p>Copyright © 2022 Smart Belize. All Rights Reserved</p>
                         </div>
                     </footer>
-                    
+
+
+
 
                 </div>
             </main>

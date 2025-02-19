@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide phone verification modal
         modal.classList.remove('block');
         modal.classList.add('hidden');
-        
+
         // Show payment method modal
         paymentMethodModal.classList.remove('hidden');
         paymentMethodModal.classList.add('block');
@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // You can add additional functionality for credit card here
     });
 });
+
 
 
 
@@ -238,4 +239,50 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = `checkout.html`;
         });
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const prepaidBtn = document.getElementById("prepaid-btn");
+    const cardBtn = document.getElementById("card-btn");
+    const continueBtn = document.getElementById("continue-btn");
+
+    let selectedMethod = null;
+
+    function toggleSelection(button) {
+        if (selectedMethod === button) {
+            // Unselect if the same button is clicked again
+            button.classList.remove("selected");
+            selectedMethod = null;
+            disableContinueButton();
+        } else {
+            // Select new button and deselect the previous one
+            if (selectedMethod) {
+                selectedMethod.classList.remove("selected");
+            }
+            button.classList.add("selected");
+            selectedMethod = button;
+            enableContinueButton();
+        }
+    }
+
+    function disableContinueButton() {
+        continueBtn.disabled = true;
+        continueBtn.classList.add("opacity-50", "cursor-not-allowed", "pointer-events-none");
+    }
+
+    function enableContinueButton() {
+        continueBtn.disabled = false;
+        continueBtn.classList.remove("opacity-50", "cursor-not-allowed", "pointer-events-none");
+    }
+
+    prepaidBtn.addEventListener("click", function () {
+        toggleSelection(prepaidBtn);
+    });
+
+    cardBtn.addEventListener("click", function () {
+        toggleSelection(cardBtn);
+    });
+
+    // Initially disable the continue button
+    disableContinueButton();
 });

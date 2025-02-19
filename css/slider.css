@@ -423,7 +423,7 @@ button[type="button"]:hover {
 
 button[type="button"]:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5);
+    /* box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.5); */
 }
 
 /* Close Modal Button Styles */
