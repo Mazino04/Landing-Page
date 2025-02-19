@@ -732,19 +732,23 @@
             line-height: 28px;
             width: 60%;
             margin: 0 auto; /* Ensures it's centered */
+            font-size: 20px;
         }
     }
     
     @media (min-width: 600px) {
         .mui-style-kdyy22 {
-            font-size: 20px;
+            font-size: 23px;
+            margin-top: -120px;
+         
             line-height: initial;
         }
     }
     
     @media (min-width: 900px) {
         .mui-style-kdyy22 {
-            font-size: 28px;
+            margin-top: 20px;
+            font-size: 26px;
             width: auto;
         }
     }
@@ -760,11 +764,12 @@
         max-width: 90%;
         margin: 40px auto; /* Centers on all screens */
         padding: 24px 20px;
+        
     }
     
     @media (min-width: 600px) {
         .mui-style-1ymhlj {
-            margin-top: 48px;
+            margin-top: 0px;
             max-width: 460px;
         }
     }
@@ -772,6 +777,7 @@
     @media (min-width: 900px) {
         .mui-style-1ymhlj {
             padding: 32px;
+            margin-top: 40px;
             max-width: 560px;
         }
     }
