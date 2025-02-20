@@ -8,6 +8,17 @@ footer {
 
     background-color: #ff8500;
 }
+/* Prevent image selection */
+img {
+    -webkit-user-select: none; /* Prevents selection on touch devices */
+    user-select: none; /* Non-webkit browsers */
+}
+
+/* Remove the blue highlight when tapping on an image */
+a:focus img, a:active img {
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
+}
 
 .footerContainer {
     width: 100%;
@@ -17,20 +28,6 @@ footer {
 .socialIcons {
     display: flex;
     justify-content: center;
-}
-
-.footerNav a {
-    pointer-events: none; /* Disable clicks on links */
-}
-
-.footerNav a img {
-    pointer-events: auto; /* Allow clicks only on the image */
-}
-
-.footerNav a:active, .footerNav a:hover {
-    outline: none;
-    box-shadow: none;
-    background: none;
 }
 
 /* Added styles for controlling image size */
@@ -43,15 +40,8 @@ footer {
     /* Responsive */
     object-fit: contain;
     padding-top: 15px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -webkit-text-decoration: none;
+    user-drag: none;
+    -webkit-user-drag: none;
 }
 
 .socialIcons a:hover i {
@@ -70,22 +60,14 @@ footer {
 }
 
 .footerNav ul li a {
-  
+    color: white;
     margin: 20px;
    padding: 20px 20px;
+    padding-left: 20px;
     text-decoration: none;
     font-size: 1.15em;
     opacity: 0.7;
     transition: 0.5s;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -webkit-text-decoration: none;
 }
 
 .footerNav ul li a:hover {
