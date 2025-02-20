@@ -56,10 +56,9 @@
                             <h1 class="MuiTypography-root MuiTypography-h1 mui-style-l8x9ra">
                                 <div class="MuiBox-root mui-style-u6i9190"></div>
                             </h1>
-                            <section>
-                                <p class="MuiTypography-root MuiTypography-body1 mui-style-kdyy22">Out of data?
-                                    Recharge now and stay connected!</p>
-                            </section>
+                            <!-- <section>
+                                <p class="MuiTypography-root MuiTypography-body1 mui-style-kdyy22"> <img src="images/MobileInternet-APR2021.jpg"/></p>
+                            </section> -->
                             <!-- Payment box begins -->
                             <div class="MuiStack-root mui-style-1ymhlj">
                                 <div class="MuiBox-root mui-style-1l4w6pd">
@@ -149,30 +148,6 @@
                                             Payment Method</h1>
                                         <p class="text-[15px] text-slate-500">Please select a payment method.</p>
                                     </header>
-<style>
-    #continue-btn {
-        background-color: #004D9D;
-        border: 1px solid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        cursor: pointer;
-    }
-    #continue-btn span {
-        color: #fff;
-        text-align: center;
-        display: block;
-    }
-    #continue-btn:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        pointer-events: none;
-    }
-    #continue-btn:hover {
-        background-color: #FF6701;
-    }
-</style>
                                     <div class="payment-right">
                                         <form action="" class="payment-form">
                                             <div class="payment-method">
@@ -190,66 +165,15 @@
                                                 </button>
 
                                                 <button type="button" class="payment-method-item" id="continue-btn"
-
-    onclick="window.location.href='bundles.html';">
-    <span>Continue</span>
-</button>
-
-                                        
-                                        
-                                        
+                                                    onclick="window.location.href='bundles.html';">
+                                                    <span>Continue</span>
+                                                </button>
                                             </div>
-
                                         </form>
                                     </div>
 
-                                  
-                 <script>document.addEventListener("DOMContentLoaded", function () {
-                    const prepaidBtn = document.getElementById("prepaid-btn");
-                    const cardBtn = document.getElementById("card-btn");
-                    const continueBtn = document.getElementById("continue-btn");
-                    
-                    let selectedMethod = null;
-                    
-                    function toggleSelection(button) {
-                        if (selectedMethod === button) {
-                            // Unselect if the same button is clicked again
-                            button.classList.remove("selected");
-                            selectedMethod = null;
-                            disableContinueButton();
-                        } else {
-                            // Select new button and deselect the previous one
-                            if (selectedMethod) {
-                                selectedMethod.classList.remove("selected");
-                            }
-                            button.classList.add("selected");
-                            selectedMethod = button;
-                            enableContinueButton();
-                        }
-                    }
-                    
-                    function disableContinueButton() {
-                        continueBtn.disabled = true;
-                        continueBtn.classList.add("opacity-50", "cursor-not-allowed", "pointer-events-none");
-                    }
-                    
-                    function enableContinueButton() {
-                        continueBtn.disabled = false;
-                        continueBtn.classList.remove("opacity-50", "cursor-not-allowed", "pointer-events-none");
-                    }
-                    
-                    prepaidBtn.addEventListener("click", function () {
-                        toggleSelection(prepaidBtn);
-                    });
-                    
-                    cardBtn.addEventListener("click", function () {
-                        toggleSelection(cardBtn);
-                    });
-                    
-                    // Initially disable the continue button
-                    disableContinueButton();
-                });
-                </script>
+
+
                                 </div>
                             </div>
 
@@ -575,8 +499,22 @@
                             </div>
                             <div class="footerNav">
                                 <ul>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="">Contact Us</a></li>
+                               
+                                    <li>
+                                        <a href="faq.html">
+                                          <img src="images/faq.png" style="width: 2.2em; height: 2.2em; vertical-align: middle; " />
+                                        
+                                        </a>
+                                      </li>
+                                      
+                                    <li>
+                                        <a href="tel:1090">
+                                          <img src="images/customer-service.png" style="width: 2.1em; height: 2.2em; vertical-align: middle; " />
+                                        
+                                        </a>
+                                      </li>
+                                      
+                                      
                                 </ul>
                             </div>
 
@@ -585,10 +523,6 @@
                             <p>Copyright © 2022 Smart Belize. All Rights Reserved</p>
                         </div>
                     </footer>
-
-
-
-
                 </div>
             </main>
         </div>

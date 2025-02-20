@@ -727,12 +727,21 @@
         width: fit-content;
     }
     
+    .mui-style-kdyy22 img {
+        max-width: 100%; /* Ensures the image scales with the width of its container */
+        height: auto; /* Maintains aspect ratio of the image */
+    }
+    
     @media (min-width: 0px) {
         .mui-style-kdyy22 {
             line-height: 28px;
-            width: 60%;
+            width: 80%; /* Makes it responsive on smaller screens */
             margin: 0 auto; /* Ensures it's centered */
             font-size: 20px;
+        }
+    
+        .mui-style-kdyy22 img {
+            max-width: 0%; /* Adjusts the image to fit smaller screens */
         }
     }
     
@@ -740,8 +749,11 @@
         .mui-style-kdyy22 {
             font-size: 23px;
             margin-top: -120px;
-         
             line-height: initial;
+        }
+    
+        .mui-style-kdyy22 img {
+            max-width: 85%; /* Adjusts the image for tablets */
         }
     }
     
@@ -751,7 +763,13 @@
             font-size: 26px;
             width: auto;
         }
+    
+        .mui-style-kdyy22 img {
+            border-radius: 15px;
+            max-width: 45%; /* Adjusts the image for larger screens */
+        }
     }
+    
     
 
     .mui-style-1ymhlj {

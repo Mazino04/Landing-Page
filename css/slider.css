@@ -409,6 +409,7 @@ button[type="button"] {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
+    margin-top: 8px;
     font-weight: 500;
     background-color: #055ab9;
     color: white;
@@ -464,7 +465,7 @@ button[type="button"]:focus {
 /* Resend text */
 .text-sm {
     padding-top: 20px;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #4c51bf;
 }
 
@@ -492,6 +493,32 @@ button[type="button"]:focus {
     }
 
     .text-sm {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
+}
+
+#continue-btn {
+    background-color: #004D9D;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#continue-btn span {
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+#continue-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#continue-btn:hover {
+    background-color: #FF6701;
 }
