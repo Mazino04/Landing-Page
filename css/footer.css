@@ -8,17 +8,6 @@ footer {
 
     background-color: #ff8500;
 }
-/* Prevent image selection */
-img {
-    -webkit-user-select: none; /* Prevents selection on touch devices */
-    user-select: none; /* Non-webkit browsers */
-}
-
-/* Remove the blue highlight when tapping on an image */
-a:focus img, a:active img {
-    outline: none;
-    -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
-}
 
 .footerContainer {
     width: 100%;
@@ -40,8 +29,6 @@ a:focus img, a:active img {
     /* Responsive */
     object-fit: contain;
     padding-top: 15px;
-    user-drag: none;
-    -webkit-user-drag: none;
 }
 
 .socialIcons a:hover i {
@@ -106,6 +93,12 @@ a:focus img, a:active img {
     }
 
     .socialIcons a {
+        /* Prevent image selection */
+    -webkit-user-select: none; /* Prevents selection on touch devices */
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
+
         padding: 8px;
         margin: 4px;
     }

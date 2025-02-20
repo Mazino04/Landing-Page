@@ -1217,22 +1217,7 @@
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Styling the Payment Method Images */
-/* .payment-method-item img {
-    width: 100px; 
-    height: 90px; 
-    object-fit: contain;
-    display: inline-block; 
-    margin: 0 10px; 
-} */
-
-/* Ensuring the payment method container aligns images horizontally */
-/* .payment-method {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-} */
-
+/* Styling the Modal Header */
 .payment-method {
     display: flex;
     flex-direction: column;
