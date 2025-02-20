@@ -19,6 +19,20 @@ footer {
     justify-content: center;
 }
 
+.footerNav a {
+    pointer-events: none; /* Disable clicks on links */
+}
+
+.footerNav a img {
+    pointer-events: auto; /* Allow clicks only on the image */
+}
+
+.footerNav a:active, .footerNav a:hover {
+    outline: none;
+    box-shadow: none;
+    background: none;
+}
+
 /* Added styles for controlling image size */
 .socialIcons img {
     width: 150px;
@@ -56,10 +70,9 @@ footer {
 }
 
 .footerNav ul li a {
-    color: white;
+  
     margin: 20px;
-   padding-right: 10px;
-    padding-left: 20px;
+   padding: 20px 20px;
     text-decoration: none;
     font-size: 1.15em;
     opacity: 0.7;
@@ -75,10 +88,10 @@ footer {
     -webkit-text-decoration: none;
 }
 
-/* .footerNav ul li a:hover {
+.footerNav ul li a:hover {
     color:white;
     opacity: 1;
-} */
+}
 
 .footerBottom {
     background-color: #ff8500;
