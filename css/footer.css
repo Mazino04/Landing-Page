@@ -29,6 +29,15 @@ footer {
     /* Responsive */
     object-fit: contain;
     padding-top: 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-text-decoration: none;
 }
 
 .socialIcons a:hover i {
@@ -55,12 +64,21 @@ footer {
     font-size: 1.15em;
     opacity: 0.7;
     transition: 0.5s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-text-decoration: none;
 }
 
-.footerNav ul li a:hover {
+/* .footerNav ul li a:hover {
     color:white;
     opacity: 1;
-}
+} */
 
 .footerBottom {
     background-color: #ff8500;
