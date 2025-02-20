@@ -5,13 +5,11 @@
 }
 
 footer {
-
     background-color: #ff8500;
 }
 
 .footerContainer {
     width: 100%;
-    /* padding: 30px 30px 20px; */
 }
 
 .socialIcons {
@@ -36,11 +34,8 @@ footer {
 /* Added styles for controlling image size */
 .socialIcons img {
     width: 150px;
-    /* Adjust width as needed */
     height: auto;
-    /* Maintain aspect ratio */
     max-width: 100%;
-    /* Responsive */
     object-fit: contain;
     padding-top: 15px;
     cursor: pointer;
@@ -70,9 +65,8 @@ footer {
 }
 
 .footerNav ul li a {
-  
     margin: 20px;
-   padding: 20px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     font-size: 1.15em;
     opacity: 0.7;
@@ -89,7 +83,7 @@ footer {
 }
 
 .footerNav ul li a:hover {
-    color:white;
+    color: white;
     opacity: 1;
 }
 
@@ -112,7 +106,8 @@ footer {
     margin: 0px 5px;
 }
 
-@media (max-width: 100px) {
+/* Adjustments for mobile */
+@media (max-width: 600px) {
     .footerNav ul {
         flex-direction: column;
     }
@@ -127,14 +122,22 @@ footer {
         padding: 8px;
         margin: 4px;
     }
-    
 
     /* Adjust image size on smaller screens */
     .socialIcons img {
         width: 120px;
-        /* Adjust for mobile */
+    }
+
+    /* Disable hover effects and click effects on mobile */
+    .footerNav a:hover, .footerNav a:active {
+        pointer-events: none; /* Prevent hover/click effects */
+    }
+
+    .footerNav a img {
+        pointer-events: auto; /* Allow click only on image */
     }
 }
+
 
 /* Logo container styling */
 .placetopay-logo img {
